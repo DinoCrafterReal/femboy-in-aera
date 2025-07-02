@@ -1,0 +1,31 @@
+<!-- zahl.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Zahl</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 150px;
+    }
+
+    .zahl {
+      font-size: 300px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="zahl" id="zahl">–</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const zahl = params.get('num');
+    document.getElementById("zahl").textContent = zahl || "–";
+  </script>
+
+</body>
+</html>
